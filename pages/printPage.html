@@ -1,0 +1,45 @@
+<header>
+    <img src="img/ben-leeds-logo.png" alt="">
+</header>
+<div class="con-custom">
+    <div class="panel">
+        <div class="panel-heading text-center">
+            <h3>Items To Be Replaced</h3>
+        </div>
+        <div class="panel-body">
+            <table class="table table-bordered bordere table-striped table-condensed datatable" ui-jq="dataTable"
+                ui-options="dataTableOpt">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>SubCat</th>
+                        <th>Item</th>
+                        <th>$</th>
+                        <th>Room</th>
+                    </tr>
+                </thead>
+                <tbody ng-repeat="item in printItems">
+                    <tr>
+                        <td>{{$index+1}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.description}}</td>
+                        <td class="text-right">{{item.price.toFixed(2)}}</td>
+                        <td>{{item.room}}</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">{{item.comment}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4 general-info-print">
+                Building: {{apartmentInfo.buildingNum}}
+            </div>
+            <div class="col-4 general-info-print">
+                Apartment: {{apartmentInfo.apartmentNum}}
+            </div>
+        </div>
+    </div>
+</div>

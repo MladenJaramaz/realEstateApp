@@ -1,0 +1,20 @@
+<header>
+	<img src="img/ben-leeds-logo.png" alt="">
+</header>
+<div class="login">
+	<div class="main">
+		<h2>Please login</h2>
+		<hr />
+		<form id="form_id" method="post">
+			<label>User Name :</label></br>
+			<input type="text" name="username" id="username" ng-model="userCredidentials.username" ng-disabled="userCredidentials.disabled"></br>
+
+			<label>Password :</label></br>
+			<input type="password" name="password" id="password" ng-model="userCredidentials.password" ng-disabled="userCredidentials.disabled"></br>
+
+			<input type="button" value="Login" id="submit" ng-click="validate()" ng-disabled="userCredidentials.disabled">
+		</form><br>
+		<span><b class="note">Note : </b>Use following username and password. <br /><b class="valid"><b class="note">Username
+					: </b> skydream<br /><b class="note">Password : </b> skydreamweb</b></span>
+	</div>
+</div>
