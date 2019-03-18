@@ -6796,7 +6796,8 @@ angular.module('myApp', [
           // re-check items
           checkboxes[index].checked = true;
           // re-display textareas
-          checkboxes[index].parentNode.parentNode.nextElementSibling.children[0].children[0].style.display = "block";
+          checkboxes[index].parentNode.parentNode.nextElementSibling.style.display = "table-row";
+          checkboxes[index].parentNode.parentNode.nextElementSibling.children[0].children[0].value = $rootScope.itemsToBeReplaced[i].comment;
         }
       }
     }

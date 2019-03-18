@@ -1,9 +1,10 @@
 angular.module('myApp')
     .controller('mainController', ["$scope", "$rootScope", function ($scope, $rootScope) {
-
+        // add item to the toBeRepaired list
         function checkUncheck() {
-
+            // DOM iddentifier
             let index = Number(this.getAttribute("data-index"));
+            // item in list identifier
             let itemId = this.getAttribute("data-item-id");
             let itemAlreadyFoundAt = null;
             for (let i = 0; i < $rootScope.itemsToBeReplaced.length; i++) {
@@ -36,10 +37,17 @@ angular.module('myApp')
                 }
             }
         }
-
+        // addd comment to the item already in the toBeReplaced list
         function addComment() {
 
-            console.log(this.parentNode.previousElementSibling.children[0].value);
+            let comment = this.parentNode.previousElementSibling.children[0].value;
+            let id = this.getAttribute("data-item-id");
+            for (let i = 0; i < $rootScope.itemsToBeReplaced.length; i++) {
+                if (id == $rootScope.itemsToBeReplaced[i].id) {
+                    $rootScope.itemsToBeReplaced[i].comment = comment;
+                }
+            }
+
         }
         
         setTimeout(() => {

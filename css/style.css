@@ -17,155 +17,163 @@
  * under the License.
  */
 * {
-    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
 
 body {
-    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
-    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
-    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    background-color:#E4E4E4;
-    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        color-stop(0, #A7A7A7),
-        color-stop(0.51, #E4E4E4)
-    );
-    background-attachment:fixed;
-    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-    font-size:12px;
-    height:100%;
-    margin:0px;
-    padding:0px;
-    /* text-transform:uppercase; */
-    width:100%;
+  -webkit-touch-callout: none;
+  /* prevent callout to copy image, etc when tap to hold */
+  -webkit-text-size-adjust: none;
+  /* prevent webkit from resizing text to fit */
+  -webkit-user-select: none;
+  /* prevent copy paste, to allow, change 'none' to 'text' */
+  background-color: #E4E4E4;
+  background-image: linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+  background-image: -webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+  background-image: -ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+  background-image: -webkit-gradient(linear,
+    left top,
+    left bottom,
+    color-stop(0, #A7A7A7),
+    color-stop(0.51, #E4E4E4));
+  background-attachment: fixed;
+  font-family: 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  /* text-transform:uppercase; */
+  width: 100%;
 }
 
 /* below line is used for online google font */
 @import url(http://fonts.googleapis.com/css?family=Raleway);
 
-h2{
- padding: 30px 35px;
- text-align:center;
- border-radius: 10px 10px 0 0;
+h2 {
+  padding: 30px 35px;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
 }
 
-hr{
- margin: 10px -50px;
- border: 0;
- border-top: 1px solid #ccc;
- margin-bottom: 40px;
+hr {
+  margin: 10px -50px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin-bottom: 40px;
 }
 
 div.central {
-  display: flex!important;
+  display: flex !important;
   justify-content: center;
   align-items: center;
- width: 100%;
- height: auto;
- font-family: 'Raleway', sans-serif;
+  width: 100%;
+  height: auto;
+  font-family: 'Raleway', sans-serif;
 }
 
-div.main{
- background-color: #FEFFED;
- width: 30%;
- padding: 10px 50px 25px;
- border: 2px solid gray;
- border-radius: 10px;
- font-family: raleway;
- margin-top:40px;
+div.main {
+  background-color: #FEFFED;
+  width: 30%;
+  padding: 10px 50px 25px;
+  border: 2px solid gray;
+  border-radius: 10px;
+  font-family: raleway;
+  margin-top: 40px;
 }
+
 div.main-welcome {
- background-color: #FEFFED;
- width: 95%;
- padding: 10px 5px 10px;
- border: 2px solid gray;
- border-radius: 10px;
- font-family: raleway;
- margin-top:20px;
+  background-color: #FEFFED;
+  width: 95%;
+  padding: 10px 5px 10px;
+  border: 2px solid gray;
+  border-radius: 10px;
+  font-family: raleway;
+  margin-top: 20px;
 }
 
-input[type=text],input[type=password]{
- width: 100%;
- height: 40px;
- padding: 5px;
- margin-bottom: 5px;
- margin-top: 5px;
- border: 2px solid #ccc;
- color: #4f4f4f;
- font-size: 16px;
- border-radius: 5px;
+input[type=text],
+input[type=password] {
+  width: 100%;
+  height: 40px;
+  padding: 5px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  border: 2px solid #ccc;
+  color: #4f4f4f;
+  font-size: 16px;
+  border-radius: 5px;
 }
 
-label{
- color: #464646;
- text-shadow: 0 1px 0 #fff;
- font-size: 14px;
- font-weight: bold;
+label {
+  color: #464646;
+  text-shadow: 0 1px 0 #fff;
+  font-size: 14px;
+  font-weight: bold;
 }
 
-center{
- font-size:32px;
+center {
+  font-size: 32px;
 }
 
-.note{
- color:red;
+.note {
+  color: red;
 }
 
-.valid{
- color:green;
+.valid {
+  color: green;
 }
 
-.back{
- text-decoration: none;
- border: 1px solid rgb(0, 143, 255);
- background-color: rgb(0, 214, 255);
- padding: 3px 20px;
- border-radius: 2px;
- color: black;
+.back {
+  text-decoration: none;
+  border: 1px solid rgb(0, 143, 255);
+  background-color: rgb(0, 214, 255);
+  padding: 3px 20px;
+  border-radius: 2px;
+  color: black;
 }
 
-input[type=button]{
- font-size: 16px;
- background: linear-gradient(#ffbc00 5%, #ffdd7f 100%);
- border: 1px solid #e5a900;
- color: #4E4D4B;
- font-weight: bold;
- cursor: pointer;
- width: 100%;
- border-radius: 5px;
- padding: 10px 0;
- outline:none;
+input[type=button] {
+  font-size: 16px;
+  background: linear-gradient(#ffbc00 5%, #ffdd7f 100%);
+  border: 1px solid #e5a900;
+  color: #4E4D4B;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px 0;
+  outline: none;
 }
 
-input[type=button]:hover{
- background: linear-gradient(#ffdd7f 5%, #ffbc00 100%);
+input[type=button]:hover {
+  background: linear-gradient(#ffdd7f 5%, #ffbc00 100%);
 }
 
-.fugo{
- float:right;
+.fugo {
+  float: right;
 }
+
 header {
-  display: flex!important;
+  display: flex !important;
   justify-content: center;
   align-items: center;
   padding-top: 15px;
 }
+
 .subnames {
   text-align: center;
   font-size: 12px;
   color: black;
 }
-table tr th{
-  background:#337ab7;
-  color:white;
-  text-align:left;
-  vertical-align:center;
+
+table tr th {
+  background: #337ab7;
+  color: white;
+  text-align: left;
+  vertical-align: center;
 }
+
 
 .panel {
   font-size: 1.5vh;
@@ -174,10 +182,11 @@ table tr th{
   border: 2px solid gray;
   border-radius: 10px;
   font-family: raleway;
-  margin-top:40px;
+  margin-top: 40px;
 }
+
 .custom-btn {
-  width: 100%!important;
+  width: 100% !important;
 }
 
 .con-custom {
@@ -187,10 +196,12 @@ table tr th{
   display: flex;
   justify-content: center;
 }
+
 th {
-  text-align: center!important;
-  vertical-align: middle!important;
+  text-align: center !important;
+  vertical-align: middle !important;
 }
+
 .login {
   display: flex;
   justify-content: center;
@@ -207,13 +218,27 @@ th {
 }
 
 .item-comment-parent {
-  
+
   display: none;
+}
+
+.item-comment-cell {
+
+  text-align: center;
 }
 
 .item-comment-btn {
 
-  
+  font-size: 16px;
+  background: linear-gradient(#ffbc00 5%, #ffdd7f 100%);
+  border: 1px solid #e5a900;
+  color: #4E4D4B;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px 0;
+  outline: none;
 }
 
 .general-info-print {
@@ -221,5 +246,3 @@ th {
   font-size: 18px;
   font-weight: 500;
 }
-
-

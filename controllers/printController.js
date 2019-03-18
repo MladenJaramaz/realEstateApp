@@ -4,6 +4,8 @@ angular.module("myApp")
         $scope.printItems = $rootScope.itemsToBeReplaced;
         $scope.generalInfo = $rootScope.apartmentInfo;
 
-        console.log($scope.printItems);
-        console.log($scope.generalInfo);
+        $scope.totalPrice = 0;
+        for (let i = 0; i < $scope.printItems.length; i++) {
+            $scope.totalPrice += $scope.printItems[i].price;
+        }
     }]);
