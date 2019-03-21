@@ -6,42 +6,47 @@
         <div class="panel-heading text-center">
             <h3>Items To Be Replaced</h3>
         </div>
-        <div class="panel-body">
-            <table class="table table-bordered bordere table-striped table-condensed datatable" ui-jq="dataTable"
-                ui-options="dataTableOpt">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>SubCat</th>
-                        <th>Item</th>
-                        <th>$</th>
-                        <th>Room</th>
-                    </tr>
-                </thead>
-                <tbody ng-repeat="item in printItems">
-                    <tr>
-                        <td class="text-center">{{$index+1}}</td>
-                        <td class="text-center">{{item.name}}</td>
-                        <td class="text-center">{{item.description}}</td>
-                        <td class="text-center">{{item.price.toFixed(2)}}</td>
-                        <td class="text-center">{{item.room}}</td>
-                    </tr>
-                    <tr>
-                        <td colspan="5" class="text-center">{{item.comment}}</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div id="print-material">
+            <div class="panel-body">
+                <table class="table table-bordered bordere table-striped table-condensed datatable" ui-jq="dataTable"
+                    ui-options="dataTableOpt">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>SubCat</th>
+                            <th>Item</th>
+                            <th>$</th>
+                            <th>Room</th>
+                        </tr>
+                    </thead>
+                    <tbody ng-repeat="item in printItems">
+                        <tr>
+                            <td class="text-center">{{$index+1}}</td>
+                            <td class="text-center">{{item.name}}</td>
+                            <td class="text-center">{{item.description}}</td>
+                            <td class="text-center">{{item.price.toFixed(2)}}</td>
+                            <td class="text-center">{{item.room}}</td>
+                        </tr>
+                        <tr>
+                            <td colspan="5" class="text-center">{{item.comment}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    Total Price: {{totalPrice.toFixed(2)}} $
+                </div>
+                <div class="col-4 general-info-print">
+                    Building: {{apartmentInfo.buildingNum}}
+                </div>
+                <div class="col-4 general-info-print">
+                    Apartment: {{apartmentInfo.apartmentNum}}
+                </div>
+            </div>
         </div>
         <div class="row">
-            <div class="col-4 text-center">
-                Total Price: {{totalPrice.toFixed(2)}} $
-            </div>
-            <div class="col-4 general-info-print">
-                Building: {{apartmentInfo.buildingNum}}
-            </div>
-            <div class="col-4 general-info-print">
-                Apartment: {{apartmentInfo.apartmentNum}}
-            </div>
+            <button id="pdf-btn" pdf-btn>Export as PDF</button>
         </div>
     </div>
 </div>
