@@ -6690,8 +6690,9 @@ angular.module('myApp', [
   $rootScope.items = [];
   $rootScope.itemsToBeReplaced = [];
   $rootScope.apartmentInfo = {
-    "buildingNum": "",
-    "apartmentNum": ""
+    buildingNum: "",
+    apartmentNum: "",
+    date: ""
   };
 
 
@@ -6797,7 +6798,16 @@ angular.module('myApp', [
           checkboxes[index].checked = true;
           // re-display textareas
           checkboxes[index].parentNode.parentNode.nextElementSibling.style.display = "table-row";
-          checkboxes[index].parentNode.parentNode.nextElementSibling.children[0].children[0].value = $rootScope.itemsToBeReplaced[i].comment;
+          if ($rootScope.itemsToBeReplaced[i].comment !== undefined) {
+            checkboxes[index].parentNode.parentNode.nextElementSibling.children[0].children[0].value = $rootScope.itemsToBeReplaced[i].comment;
+          } else {
+            checkboxes[index].parentNode.parentNode.nextElementSibling.children[0].children[0].value = "Comment";
+          }
+          if ($rootScope.itemsToBeReplaced[i].quantity !== undefined) {
+            checkboxes[index].parentNode.parentNode.nextElementSibling.children[1].children[0].value = $rootScope.itemsToBeReplaced[i].quantity;
+          } else {
+            checkboxes[index].parentNode.parentNode.nextElementSibling.children[1].children[0].value = 1;
+          }
         }
       }
     }

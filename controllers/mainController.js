@@ -38,13 +38,21 @@ angular.module('myApp')
             }
         }
         // addd comment to the item already in the toBeReplaced list
-        function addComment() {
+        function addCommentAddQuantity() {
 
-            let comment = this.parentNode.previousElementSibling.children[0].value;
+            let comment = this.parentNode.previousElementSibling.previousElementSibling.children[0].value;
+            let quantity = this.parentNode.previousElementSibling.children[0].value;
+            if (!quantity) {
+                quantity = 1;
+            } else {
+                quantity = Number(quantity);
+            }
             let id = this.getAttribute("data-item-id");
             for (let i = 0; i < $rootScope.itemsToBeReplaced.length; i++) {
                 if (id == $rootScope.itemsToBeReplaced[i].id) {
                     $rootScope.itemsToBeReplaced[i].comment = comment;
+                    $rootScope.itemsToBeReplaced[i].quantity = quantity;
+                    this.parentNode.parentNode.style.display = "none";
                 }
             }
 
@@ -62,7 +70,7 @@ angular.module('myApp')
                 // textarea event listeners
                 let itemCommentBtns = document.querySelectorAll("button.item-comment-btn");
                 for (let i = 0; i < itemCommentBtns.length; i++) {
-                    itemCommentBtns[i].addEventListener("click", addComment);
+                    itemCommentBtns[i].addEventListener("click", addCommentAddQuantity);
                 }
             }, 500);
         }, 500);

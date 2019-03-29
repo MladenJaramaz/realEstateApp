@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="myApp">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,15 +17,20 @@
   <script src="js/app.js" charset="utf-8"></script>
   <title>{{pageTitle}}</title>
 </head>
+
 <body>
+  <div class="container">
+    <header class="pt-3 mt-2">
+      <img class="img-fluid" width="200px" height="40px" src="img/ben-leeds-logo.png" alt="Ben Leeds Properties logo">
+    </header>
 
+    <div ng-view></div>
 
-  <div ng-view></div>
+  </div>
 
-
-
-<script src="controllers/loginController.js" charset="utf-8"></script>
-<script src="controllers/mainController.js" charset="utf-8"></script>
-<script src="controllers/printController.js" charset="utf-8"></script>
+  <script src="controllers/loginController.js" charset="utf-8"></script>
+  <script src="controllers/mainController.js" charset="utf-8"></script>
+  <script src="controllers/printController.js" charset="utf-8"></script>
 </body>
+
 </html>
