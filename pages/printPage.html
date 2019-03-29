@@ -1,7 +1,7 @@
 <div class="con-custom">
     <div class="panel">
         <div class="panel-heading text-center">
-             <a href="#/rooms" class="float-left btn btn-sm btn-info mt-1 ml-1">Home</a>
+            <a href="#/rooms" class="float-left btn btn-sm btn-info mt-1 ml-1">Home</a>
             <h3>Work-Order</h3>
         </div>
         <div id="print-material">
@@ -33,25 +33,25 @@
                     </tbody>
                 </table>
             </div>
-            <div class="row">
-                <div class="col-4 general-info-print offset-4">
+            <div class="row text-center">
+                <div class="col-sm-6 general-info-print">
                     Building: #{{apartmentInfo.buildingNum}}
                 </div>
-                <div class="col-4 general-info-print">
+                <div class="col-sm-6 general-info-print">
                     Apartment: #{{apartmentInfo.apartmentNum}}
                 </div>
             </div>
-            <div class="row mb-2">
-                <div class="col-4  general-info-print offset-4">
+            <div class="row mt-2 text-center">
+                <div class="col-sm-6  general-info-print">
                     Date: {{entryDate}}
                 </div>
-                <div class="col-4 general-info-print">
+                <div class="col-sm-6 general-info-print">
                     Total Price: {{totalPrice.toFixed(2)}}$
                 </div>
             </div>
         </div>
         <div class="row">
-            <button id="pdf-btn" pdf-btn>Export as PDF</button>
+            <button id="pdf-btn" class="btn" pdf-btn>Export as PDF</button>
         </div>
     </div>
 </div>
